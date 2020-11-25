@@ -1,0 +1,33 @@
+.wrapper {
+  width: 30vw;
+  margin: auto;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid gray;
+  padding: 10px 0;
+  width: 200px;
+}
+
+input:valid,
+textarea:valid {
+  border-bottom-color: green;
+}
+
+input:invalid,
+textarea:invalid {
+  border-bottom-color: red;
+}
+
+a {
+  display: flex;
+  width: 200px;
+  height: 2rem;
+  padding: 0 10px;
+  background-color: gray;
+  text-decoration: none;
+  box-sizing: border-box;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
