@@ -17,9 +17,6 @@ debug.log
 # production
 /build
 
-# challenge
-/challenge
-
 # misc
 .DS_Store
 .env.local

@@ -31,15 +31,18 @@ export default function SearchInput(props: Props) {
     }
   }, [execute, search]);
 
-  const handleOnChange = (ev: React.ChangeEvent<{ value: unknown }>) => {
-    ev.persist();
-    const value = ev.target.value as string;
-    setSearch(value);
+  const handleOnChange = (ev: React.ChangeEvent<{ value: string }>) => {
+    setSearch(ev.target.value);
   };
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
-    onSelectItem(e.currentTarget.text);
+    const value = e.currentTarget.text;
+    onSelectItem(value);
+    setSearch(value);
+    if (inputRef.current) {
+      inputRef.current.value = value; //assigning the selected value to the input
+    }
   };
 
   return (
